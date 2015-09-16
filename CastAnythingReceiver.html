@@ -5,9 +5,13 @@
 	</head>
 	
 	<body>
-		<p>
-			Send me to TV
-		</p>
+	<video id='media'/>
+  <script>
+    window.mediaElement = document.getElementById('media');
+    window.mediaManager = new cast.receiver.MediaManager(window.mediaElement);
+    window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
+    window.castReceiverManager.start();
+  </script>
 	</body>
 	
 </html>
